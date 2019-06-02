@@ -27,7 +27,9 @@ public class Server implements Disposable {
     }
 
     private Mono<RSocket> byMimeType(String dataMimeType) {
-        if (dataMimeType.equals("json")) return Mono.just(new ServerJsonRSocket());
+       //        if (dataMimeType.equals("json")) return Mono.just(new ServerJsonRSocket());
+//        return Mono.just(new ServerPlaintextRSocket());
+//        return Mono.just(new ServerJsonRSocket());
         return Mono.just(new ServerPlaintextRSocket());
     }
 
